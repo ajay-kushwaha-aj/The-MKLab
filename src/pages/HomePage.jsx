@@ -196,11 +196,10 @@ export default function HomePage() {
                       role="tab"
                       aria-selected={selected}
                       onClick={() => setActiveThemeIdx(i)}
-                      className={`w-full rounded-xl border p-4 text-left transition-all duration-150 ${
-                        selected
-                          ? "border-[var(--pill-active-bg)] bg-[var(--pill-active-bg)] text-[var(--pill-active-text)] dark:border-[#234D75] shadow-md"
-                          : "border-[var(--border-subtle)] bg-[var(--bg-surface)] text-[var(--text-primary)] hover:translate-x-0.5 hover:border-[var(--border-strong)]"
-                      }`}
+                      className={`w-full rounded-xl border p-4 text-left transition-all duration-150 ${selected
+                        ? "border-[var(--pill-active-bg)] bg-[var(--pill-active-bg)] text-[var(--pill-active-text)] dark:border-[#234D75] shadow-md"
+                        : "border-[var(--border-subtle)] bg-[var(--bg-surface)] text-[var(--text-primary)] hover:translate-x-0.5 hover:border-[var(--border-strong)]"
+                        }`}
                     >
                       <span className={`mb-1 block font-mono-tech text-[11px] ${selected ? "text-[var(--teal-bright)]" : "text-[var(--teal)]"}`}>
                         THEME {t.index}
@@ -363,11 +362,10 @@ export default function HomePage() {
                         role="tab"
                         aria-selected={selected}
                         onClick={() => setActiveGroupIdx(idx)}
-                        className={`h-8 rounded-lg border px-3 font-mono-tech text-xs font-medium transition-colors ${
-                          selected
-                            ? "border-[var(--pill-active-bg)] bg-[var(--pill-active-bg)] text-[var(--pill-active-text)] dark:border-[#234D75]"
-                            : "border-[var(--border-subtle)] bg-[var(--bg-page)] text-[var(--text-secondary)] hover:border-[var(--border-strong)] hover:bg-[var(--bg-raised)]"
-                        }`}
+                        className={`h-8 rounded-lg border px-3 font-mono-tech text-xs font-medium transition-colors ${selected
+                          ? "border-[var(--pill-active-bg)] bg-[var(--pill-active-bg)] text-[var(--pill-active-text)] dark:border-[#234D75]"
+                          : "border-[var(--border-subtle)] bg-[var(--bg-page)] text-[var(--text-secondary)] hover:border-[var(--border-strong)] hover:bg-[var(--bg-raised)]"
+                          }`}
                       >
                         {photo.label}
                       </button>
@@ -437,11 +435,10 @@ export default function HomePage() {
                       type="button"
                       onClick={() => setActiveGroupIdx(idx)}
                       aria-label={`Show ${photo.label} group picture`}
-                      className={`group relative aspect-[4/3] overflow-hidden rounded-lg border bg-[var(--bg-page)] transition-all duration-150 ${
-                        selected
-                          ? "border-[var(--accent)] ring-2 ring-[var(--accent)]/30"
-                          : "border-[var(--border-subtle)] opacity-75 hover:-translate-y-0.5 hover:opacity-100"
-                      }`}
+                      className={`group relative aspect-[4/3] overflow-hidden rounded-lg border bg-[var(--bg-page)] transition-all duration-150 ${selected
+                        ? "border-[var(--accent)] ring-2 ring-[var(--accent)]/30"
+                        : "border-[var(--border-subtle)] opacity-75 hover:-translate-y-0.5 hover:opacity-100"
+                        }`}
                     >
                       <img
                         src={photo.src}
@@ -554,7 +551,7 @@ export default function HomePage() {
                 </span>
                 <h2 className="mt-4 font-display text-[28px] font-medium">Join The MKLab</h2>
                 <p className="mt-3 mb-5 text-sm leading-relaxed text-[var(--text-on-dark-muted)]">
-                  Openings for <strong className="font-medium text-white">Project Staff / Junior Research Fellows (JRFs)</strong> in computational RNA biology, 3D chromatin interaction networks, epitranscriptomics, and cancer genomics.
+                  Openings for <strong className="font-medium text-white">Project Staff / Junior Research Fellows (JRFs)</strong> in computational biology, 3D chromatin interaction networks, epitranscriptomics, and cancer genomics.
                 </p>
               </div>
               <div className="mb-6 grid gap-2.5 rounded-xl border border-white/10 dark:border-[var(--border-subtle)] bg-white/[0.04] dark:bg-[#09131E]/65 p-4 text-sm text-[var(--text-on-dark-muted)]">
