@@ -1,0 +1,158 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    color-scheme: light;
+    --bg-page: #F4F7F9;
+    --bg-surface: #FFFFFF;
+    --bg-raised: #E6EEF4;
+    --bg-muted-bar: #D8E3EC;
+    --bg-hero: #0F2942;
+    --bg-hero-elevated: #153554;
+    --border-subtle: rgba(15, 41, 66, 0.10);
+    --border-strong: rgba(15, 41, 66, 0.18);
+    --text-primary: #1E293B;
+    --text-secondary: #475569;
+    --text-muted: #64748B;
+    --text-on-dark: #F4F7F9;
+    --text-on-dark-muted: #CBD5E1;
+    --accent: #E05A47;
+    --accent-hover: #C94836;
+    --accent-text: #FFFFFF;
+    --accent-soft-bg: rgba(224, 90, 71, 0.12);
+    --accent-soft-text: #C94836;
+    --teal: #0E7C7B;
+    --teal-soft-bg: rgba(14, 124, 123, 0.10);
+    --teal-bright: #2DD4BF;
+    --pill-active-bg: #0F2942;
+    --pill-active-text: #F4F7F9;
+    --nav-bg: rgba(244, 247, 249, 0.90);
+    --nav-bg-scrolled: rgba(255, 255, 255, 0.96);
+    --font-display: "Newsreader", Georgia, "Times New Roman", serif;
+    --font-sans: "Instrument Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  html.dark {
+    color-scheme: dark;
+    --bg-page: #09131E;
+    --bg-surface: #102030;
+    --bg-raised: #102030;
+    --bg-muted-bar: #183857;
+    --bg-hero: #09131E;
+    --bg-hero-elevated: #102030;
+    --border-subtle: #183857;
+    --border-strong: #234D75;
+    --text-primary: #F1F5F9;
+    --text-secondary: #CBD5E1;
+    --text-muted: #94A3B8;
+    --text-on-dark: #F1F5F9;
+    --text-on-dark-muted: #94A3B8;
+    --accent: #F26D5B;
+    --accent-hover: #FF8270;
+    --accent-text: #09131E;
+    --accent-soft-bg: rgba(242, 109, 91, 0.16);
+    --accent-soft-text: #F26D5B;
+    --teal: #22B8B5;
+    --teal-soft-bg: rgba(34, 184, 181, 0.14);
+    --teal-bright: #22B8B5;
+    --pill-active-bg: #183857;
+    --pill-active-text: #F1F5F9;
+    --nav-bg: rgba(16, 32, 48, 0.88);
+    --nav-bg-scrolled: rgba(16, 32, 48, 0.96);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--bg-page);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    font-size: 15px;
+    line-height: 1.6;
+    overflow-x: clip;
+    transition: background-color 200ms ease, color 200ms ease;
+  }
+
+  button:not(:disabled),
+  [role="tab"],
+  a[href] {
+    cursor: pointer;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono-tech {
+  font-family: var(--font-mono);
+}
+
+/* Smooth Ticker */
+@keyframes tickerScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.ticker-track {
+  display: flex;
+  gap: 2.5rem;
+  width: max-content;
+  animation: tickerScroll 48s linear infinite;
+}
+
+.ticker-container:hover .ticker-track {
+  animation-play-state: paused;
+}
+
+/* SVG Molecular Animations */
+@keyframes svgFlow {
+  to { stroke-dashoffset: -224; }
+}
+
+.svg-flow {
+  stroke-dasharray: 8 6;
+  animation: svgFlow 18s linear infinite;
+}
+
+@keyframes svgBreathe {
+  0%, 100% { transform: scale(1); opacity: 0.92; }
+  50% { transform: scale(1.05); opacity: 1; }
+}
+
+.svg-breathe {
+  transform-origin: center;
+  animation: svgBreathe 4s ease-in-out infinite;
+}
+
+@keyframes pulseSoft {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.25); opacity: 0.72; }
+}
+
+.live-dot {
+  animation: pulseSoft 2.4s ease-in-out infinite;
+}
+
+@keyframes fadeRise {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-rise {
+  animation: fadeRise 380ms var(--ease) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ticker-track, .svg-flow, .svg-breathe, .live-dot, .animate-fade-rise {
+    animation: none !important;
+  }
+}
