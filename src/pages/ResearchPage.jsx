@@ -99,9 +99,9 @@ export default function ResearchPage() {
             </div>
             <div className="flex flex-wrap gap-2">
               {[
-                { key: "all", label: "All (11)" },
-                { key: "current", label: "Current (8)" },
-                { key: "completed", label: "Completed (3)" },
+                { key: "all", label: "All Grants" },
+                { key: "current", label: "Current" },
+                { key: "completed", label: "Completed" },
               ].map((b) => (
                 <button
                   key={b.key}

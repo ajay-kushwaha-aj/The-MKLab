@@ -32,8 +32,8 @@ export default function NewsPage() {
           <div className="mb-6 flex flex-wrap gap-2">
             {[
               { key: "all", label: "All Updates" },
-              { key: "2026", label: "2026 (9)" },
-              { key: "2025", label: "2025 (1)" },
+              { key: "2026", label: "2026" },
+              { key: "2025", label: "2025" },
             ].map((b) => (
               <button
                 key={b.key}
@@ -96,7 +96,7 @@ export default function NewsPage() {
               <div>
                 <h3 className="mb-4 inline-flex items-center gap-2 font-mono-tech text-[13px] text-[var(--teal)]">
                   <Mic size={14} strokeWidth={1.6} />
-                  <span>Recent Invited Talks &amp; Keynotes (34 total)</span>
+                  <span>Recent Invited Talks &amp; Keynotes</span>
                 </h3>
                 <ol className="grid list-decimal gap-3 pl-5 text-sm text-[var(--text-secondary)]">
                   {D.piCV.invitedTalks.slice(0, 10).map((t, idx) => (
@@ -108,7 +108,7 @@ export default function NewsPage() {
                     to="/cv#talks"
                     className="inline-flex h-8 items-center rounded border border-[var(--border-strong)] bg-[var(--bg-surface)] px-3 text-[13px] font-medium text-[var(--text-primary)] hover:border-[var(--teal)] hover:text-[var(--teal)]"
                   >
-                    View all 34 talks
+                    View all talks
                   </Link>
                 </div>
               </div>
@@ -118,7 +118,7 @@ export default function NewsPage() {
               <div>
                 <h3 className="mb-4 inline-flex items-center gap-2 font-mono-tech text-[13px] text-[var(--teal)]">
                   <CalendarDays size={14} strokeWidth={1.6} />
-                  <span>Workshops &amp; Symposia Organized (8)</span>
+                  <span>Workshops &amp; Symposia Organized</span>
                 </h3>
                 <ol className="grid list-decimal gap-3 pl-5 text-sm text-[var(--text-secondary)]">
                   {D.piCV.organizedEvents.map((e, idx) => (

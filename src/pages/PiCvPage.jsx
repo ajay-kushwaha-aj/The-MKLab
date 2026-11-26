@@ -81,12 +81,12 @@ export default function PiCvPage() {
             <div className="px-3 py-1.5 font-mono-tech text-[11px] text-[var(--text-muted)]">Dossier Sections</div>
             {[
               { href: "#positions", label: "Positions & Education", Icon: Briefcase },
-              { href: "#achievements", label: "Academic Achievements (12)", Icon: Award },
-              { href: "#memberships", label: "Memberships (3)", Icon: Users },
+              { href: "#achievements", label: "Academic Achievements", Icon: Award },
+              { href: "#memberships", label: "Memberships", Icon: Users },
               { href: "#statements", label: "Research & Teaching Statements", Icon: BookOpen },
               { href: "#mentoring", label: "Mentoring & Doctoral Committees", Icon: GraduationCap },
-              { href: "#grants", label: "Funded Grants (11)", Icon: CalendarDays },
-              { href: "#talks", label: "Invited Talks (34)", Icon: Mic },
+              { href: "#grants", label: "Funded Grants", Icon: CalendarDays },
+              { href: "#talks", label: "Invited Talks", Icon: Mic },
               { href: "#service", label: "Events & Journal Reviews", Icon: FileText },
             ].map(({ href, label, Icon }) => (
               <a
@@ -140,7 +140,7 @@ export default function PiCvPage() {
 
             <Reveal>
               <section id="achievements" className="mb-10 border-b border-[var(--border-subtle)] pb-10">
-                <h2 className="mb-4 font-display text-2xl font-medium sm:text-[26px]">Academic Achievements (12)</h2>
+                <h2 className="mb-4 font-display text-2xl font-medium sm:text-[26px]">Academic Achievements</h2>
                 <ol className="grid list-decimal gap-3 pl-5 text-sm leading-relaxed text-[var(--text-secondary)]">
                   {CV.achievements.map((a, idx) => (
                     <li key={idx}>{a}</li>
@@ -200,7 +200,7 @@ export default function PiCvPage() {
                     </ul>
                   </div>
                 </div>
-                <h3 className="mb-3 font-mono-tech text-xs text-[var(--teal)]">Thesis Doctoral Committee Member (12)</h3>
+                <h3 className="mb-3 font-mono-tech text-xs text-[var(--teal)]">Thesis Doctoral Committee Member</h3>
                 <ol className="grid list-decimal gap-2 pl-5 text-sm text-[var(--text-secondary)]">
                   {CV.doctoralCommittees.map((c, idx) => (
                     <li key={idx}>{c}</li>
@@ -212,7 +212,7 @@ export default function PiCvPage() {
             <Reveal>
               <section id="grants" className="mb-10 border-b border-[var(--border-subtle)] pb-10">
                 <h2 className="mb-4 font-display text-2xl font-medium sm:text-[26px]">Extramural Grants</h2>
-                <h3 className="mb-3 font-mono-tech text-xs text-[var(--teal)]">Current (8)</h3>
+                <h3 className="mb-3 font-mono-tech text-xs text-[var(--teal)]">Current Grants</h3>
                 <div className="mb-6">
                   {D.grants.current.map((g, idx) => (
                     <div key={idx} className="grid gap-1 border-t border-[var(--border-subtle)] py-3 sm:grid-cols-[180px_minmax(0,1fr)] sm:gap-4">
@@ -234,7 +234,7 @@ export default function PiCvPage() {
                     </div>
                   ))}
                 </div>
-                <h3 className="mb-3 font-mono-tech text-xs text-[var(--text-muted)]">Completed (3)</h3>
+                <h3 className="mb-3 font-mono-tech text-xs text-[var(--text-muted)]">Completed Grants</h3>
                 <div>
                   {D.grants.completed.map((g, idx) => (
                     <div key={idx} className="grid gap-1 border-t border-[var(--border-subtle)] py-3 sm:grid-cols-[180px_minmax(0,1fr)] sm:gap-4">
@@ -258,7 +258,7 @@ export default function PiCvPage() {
             <Reveal>
               <section id="talks" className="mb-10 border-b border-[var(--border-subtle)] pb-10">
                 <h2 className="mb-4 font-display text-2xl font-medium sm:text-[26px]">
-                  Invited Talks &amp; Resource Person (34)
+                  Invited Talks &amp; Resource Person
                 </h2>
                 <ol className="grid list-decimal gap-3 pl-5 text-sm text-[var(--text-secondary)]">
                   {CV.invitedTalks.map((t, idx) => (
@@ -273,7 +273,7 @@ export default function PiCvPage() {
                 <h2 className="mb-4 font-display text-2xl font-medium sm:text-[26px]">Academic Service</h2>
                 <div className="grid gap-6 md:grid-cols-2">
                   <div className="rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-surface)] p-6 shadow-xs">
-                    <h3 className="mb-3 font-mono-tech text-xs text-[var(--teal)]">Coordinator / Organizer (8)</h3>
+                    <h3 className="mb-3 font-mono-tech text-xs text-[var(--teal)]">Coordinator / Organizer</h3>
                     <ol className="grid list-decimal gap-2 pl-4 text-sm text-[var(--text-secondary)]">
                       {CV.organizedEvents.map((e, idx) => (
                         <li key={idx}>{e}</li>
@@ -281,7 +281,7 @@ export default function PiCvPage() {
                     </ol>
                   </div>
                   <div className="rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-surface)] p-6 shadow-xs">
-                    <h3 className="mb-3 font-mono-tech text-xs text-[var(--teal)]">Journal Reviewer (7)</h3>
+                    <h3 className="mb-3 font-mono-tech text-xs text-[var(--teal)]">Journal Reviewer</h3>
                     <ul className="grid list-disc gap-2 pl-4 text-sm text-[var(--text-secondary)]">
                       {CV.journalReviewer.map((r, idx) => (
                         <li key={idx}>{r}</li>

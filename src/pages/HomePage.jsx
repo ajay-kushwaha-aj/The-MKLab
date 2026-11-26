@@ -74,13 +74,13 @@ export default function HomePage() {
                 to="/publications"
                 className="inline-flex h-10 flex-1 items-center justify-center rounded-lg border border-white/15 dark:border-[#183857] bg-white/8 dark:bg-[#102030] px-4 text-sm font-medium text-[var(--text-on-dark)] transition-colors duration-150 hover:bg-white/15 dark:hover:bg-[#183857] sm:h-11 sm:flex-initial sm:px-5"
               >
-                Browse 32 Publications
+                Browse Publications
               </Link>
               <Link
                 to="/team#open-positions"
                 className="inline-flex h-10 flex-1 items-center justify-center rounded-lg border border-[var(--teal-bright)]/40 bg-[var(--teal-soft-bg)] px-4 text-sm font-medium text-[var(--teal-bright)] transition-colors duration-150 hover:bg-[var(--teal-bright)]/20 sm:h-11 sm:flex-initial sm:px-5"
               >
-                3 Open JRF Roles
+                Open Positions
               </Link>
             </div>
           </div>
@@ -471,7 +471,7 @@ export default function HomePage() {
                 <h2 className="font-display text-2xl font-medium tracking-tight sm:text-3xl">Recent peer-reviewed papers</h2>
               </div>
               <Link to="/publications" className="inline-flex items-center gap-2 text-sm font-medium text-[var(--teal)] hover:underline">
-                All 32 articles + 7 chapters <ArrowRight size={16} strokeWidth={1.5} />
+                All Publications <ArrowRight size={16} strokeWidth={1.5} />
               </Link>
             </div>
           </Reveal>
@@ -550,11 +550,11 @@ export default function HomePage() {
             <div className="flex h-full flex-col rounded-2xl border border-white/10 dark:border-[var(--border-subtle)] bg-[#0F2942] dark:bg-[var(--bg-surface)] p-6 text-[var(--text-on-dark)] shadow-xl sm:p-8">
               <div>
                 <span className="inline-flex h-6 items-center rounded border border-[var(--accent)]/40 bg-[var(--accent-soft-bg)] px-2.5 font-mono-tech text-xs font-medium text-[var(--accent)]">
-                  3 Positions Available
+                  Open Positions
                 </span>
                 <h2 className="mt-4 font-display text-[28px] font-medium">Join The MKLab</h2>
                 <p className="mt-3 mb-5 text-sm leading-relaxed text-[var(--text-on-dark-muted)]">
-                  Openings for <strong className="font-medium text-white">3 Project Staff / Junior Research Fellows (JRFs)</strong> in computational RNA biology, 3D chromatin interaction networks, epitranscriptomics, and cancer genomics.
+                  Openings for <strong className="font-medium text-white">Project Staff / Junior Research Fellows (JRFs)</strong> in computational RNA biology, 3D chromatin interaction networks, epitranscriptomics, and cancer genomics.
                 </p>
               </div>
               <div className="mb-6 grid gap-2.5 rounded-xl border border-white/10 dark:border-[var(--border-subtle)] bg-white/[0.04] dark:bg-[#09131E]/65 p-4 text-sm text-[var(--text-on-dark-muted)]">

@@ -98,7 +98,7 @@ export default function MemberDrawer({ member, onClose }) {
                 onClick={onClose}
                 className="inline-flex h-10 items-center rounded-lg bg-[var(--accent)] px-5 text-sm font-semibold text-[var(--accent-text)] hover:bg-[var(--accent-hover)]"
               >
-                Open Complete CV Dossier (10 Pages)
+                Open Complete CV Dossier
               </Link>
             </div>
           )}

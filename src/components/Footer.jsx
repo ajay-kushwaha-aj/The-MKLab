@@ -82,7 +82,7 @@ export default function Footer() {
               <li>
                 <Link to="/team#open-positions" className="inline-flex items-center gap-2 hover:text-[var(--teal)]">
                   <Briefcase size={14} strokeWidth={1.6} className="shrink-0 text-[var(--accent)]" />
-                  <span>Open JRF / Staff Positions (3)</span>
+                  <span>Open JRF / Staff Positions</span>
                 </Link>
               </li>
             </ul>

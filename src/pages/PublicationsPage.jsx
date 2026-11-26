@@ -62,7 +62,7 @@ export default function PublicationsPage() {
           </div>
           <h1 className="mt-3 font-display text-3xl font-medium tracking-tight sm:text-4xl lg:text-[46px]">Publications</h1>
           <p className="mt-4 max-w-[64ch] text-base leading-relaxed text-[var(--text-on-dark-muted)] sm:text-lg">
-            32 peer-reviewed journal articles (2012–2026) and 7 Springer Nature book chapters in chronological order across University of Hyderabad, University of Virginia, and CDFD.
+            Peer-reviewed journal articles and Springer Nature book chapters in chronological order across University of Hyderabad, University of Virginia, and CDFD.
           </p>
         </div>
       </section>
@@ -142,9 +142,9 @@ export default function PublicationsPage() {
           <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
             <div className="flex flex-wrap gap-2" role="group" aria-label="Filter publications">
               {[
-                { key: "all", label: "All (39)" },
-                { key: "articles", label: "Journal Articles (32)" },
-                { key: "chapters", label: "Book Chapters (7)" },
+                { key: "all", label: "All" },
+                { key: "articles", label: "Journal Articles" },
+                { key: "chapters", label: "Book Chapters" },
                 { key: "corresponding", label: "Corresponding Author" },
                 { key: "uoh", label: "UoH" },
                 { key: "uva", label: "UVA" },

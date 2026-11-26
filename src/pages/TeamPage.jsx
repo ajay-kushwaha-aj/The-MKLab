@@ -61,10 +61,10 @@ export default function TeamPage() {
             {[
               { key: "all", label: "All Sections" },
               { key: "pi", label: "Principal Investigator" },
-              { key: "phd", label: "PhD Students (4)" },
+              { key: "phd", label: "PhD Students" },
               { key: "staff", label: "Staff & Open Roles" },
-              { key: "students", label: "Master's & Interns (4)" },
-              { key: "alumni", label: "Alumni (22)" },
+              { key: "students", label: "Master's & Interns" },
+              { key: "alumni", label: "Alumni" },
               { key: "mascot", label: "Mascot" },
             ].map((pill) => (
               <button
@@ -88,7 +88,6 @@ export default function TeamPage() {
               <div className="animate-fade-rise">
                 <h2 className="mb-5 flex items-center justify-between border-b border-[var(--border-subtle)] pb-2 font-mono-tech text-[13px] text-[var(--teal)]">
                   <span>Principal Investigator</span>
-                  <span>01</span>
                 </h2>
                 <div className="group grid items-start gap-6 rounded-2xl border border-[var(--border-subtle)] bg-[var(--bg-surface)] p-6 shadow-xs transition-all duration-200 hover:border-[var(--border-strong)] hover:shadow-md sm:grid-cols-[auto_minmax(0,1fr)]">
                   <MemberAvatar person={T.pi} sizeClass="h-24 w-24" />
@@ -126,7 +125,6 @@ export default function TeamPage() {
               <div className="animate-fade-rise">
                 <h2 className="mb-5 flex items-center justify-between border-b border-[var(--border-subtle)] pb-2 font-mono-tech text-[13px] text-[var(--teal)]">
                   <span>PhD Students</span>
-                  <span className="tabular-nums">04</span>
                 </h2>
                 <div className="grid gap-6 md:grid-cols-2">
                   {T.phd.map((m) => (
@@ -168,7 +166,6 @@ export default function TeamPage() {
               <div id="open-positions" className="animate-fade-rise">
                 <h2 className="mb-5 flex items-center justify-between border-b border-[var(--border-subtle)] pb-2 font-mono-tech text-[13px] text-[var(--teal)]">
                   <span>Project Staffs / JRFs &amp; Open Positions</span>
-                  <span className="tabular-nums">1 Active · 3 Open</span>
                 </h2>
                 <div className="grid gap-6 md:grid-cols-2">
                   {T.staff.map((m) => (
@@ -207,7 +204,7 @@ export default function TeamPage() {
                       <div>
                         <span className="inline-flex h-6 items-center gap-1.5 rounded border border-[var(--teal)]/35 bg-[var(--teal-soft-bg)] px-2 font-mono-tech text-xs text-[var(--teal)]">
                           <Briefcase size={12} strokeWidth={1.6} />
-                          Position Available · #{i + 1}
+                          Position Available
                         </span>
                         <h3 className="mt-3 font-display text-xl font-medium">Project Staff / JRF</h3>
                         <p className="mt-2 text-sm text-[var(--text-secondary)]">
@@ -230,7 +227,6 @@ export default function TeamPage() {
               <div className="animate-fade-rise">
                 <h2 className="mb-5 flex items-center justify-between border-b border-[var(--border-subtle)] pb-2 font-mono-tech text-[13px] text-[var(--teal)]">
                   <span>Master's Dissertation &amp; Intern Students</span>
-                  <span className="tabular-nums">04</span>
                 </h2>
                 <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
                   {T.mastersAndInterns.map((m) => (
@@ -260,7 +256,6 @@ export default function TeamPage() {
                 <div>
                   <h2 className="mb-5 flex items-center justify-between border-b border-[var(--border-subtle)] pb-2 font-mono-tech text-[13px] text-[var(--teal)]">
                     <span>Alumni — PhD</span>
-                    <span className="tabular-nums">01</span>
                   </h2>
                   <div className="grid gap-6 md:grid-cols-2">
                     {T.alumniPhd.map((m) => (
@@ -293,7 +288,6 @@ export default function TeamPage() {
                 <div>
                   <h2 className="mb-5 flex items-center justify-between border-b border-[var(--border-subtle)] pb-2 font-mono-tech text-[13px] text-[var(--teal)]">
                     <span>Alumni — Master's Dissertation</span>
-                    <span className="tabular-nums">12</span>
                   </h2>
                   <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                     {T.alumniMasters.map((m) => (
@@ -332,7 +326,6 @@ export default function TeamPage() {
                 <div>
                   <h2 className="mb-5 flex items-center justify-between border-b border-[var(--border-subtle)] pb-2 font-mono-tech text-[13px] text-[var(--teal)]">
                     <span>Alumni — Interns</span>
-                    <span className="tabular-nums">09</span>
                   </h2>
                   <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                     {T.alumniInterns.map((m) => (
@@ -375,7 +368,7 @@ export default function TeamPage() {
                     <div>
                       <h3 className="font-display text-2xl font-medium">{T.mascot.name}</h3>
                       <div className="text-sm text-[var(--text-secondary)]">
-                        Official Lab Mascot of The MKLab · Featured across 6 gallery snapshots on the original lab roster.
+                        Official Lab Mascot of The MKLab.
                       </div>
                     </div>
                   </div>

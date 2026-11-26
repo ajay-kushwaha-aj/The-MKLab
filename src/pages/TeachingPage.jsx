@@ -65,7 +65,7 @@ export default function TeachingPage() {
                   {c.syllabus && (
                     <div className="mt-6 border-t border-[var(--border-subtle)] pt-5">
                       <div className="mb-4 font-mono-tech text-xs text-[var(--text-muted)]">
-                        Syllabus ({c.syllabus.length} sessions)
+                        Course Syllabus
                       </div>
                       <div className="grid gap-3 md:grid-cols-2">
                         {c.syllabus.map((s) => (
